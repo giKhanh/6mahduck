@@ -6,7 +6,7 @@
    <div class="row">
       <div class="col-4">
          <div class="card">
-            <img src="{{ phone.image }}" width="250" height="250">
+            <img src="{{ phone.image }}" width="290" height="340">
          </div>
       </div>
       <div class="col-6" >
@@ -61,6 +61,16 @@
                </td>
             </tr>
          </table>
+
+           	<div class="card card-footer mt-1"  style="background-color: lightblue">
+										{# gửi dữ liệu sang action addToCart trong CartController #}
+										<div class = "font family">
+										<form action="{{ path('add_to_cart')}}" method="post">
+											<input type="hidden" name="phoneid" value="{{ phone.id }}">
+											<input type="number" name="quantity" min="1" max="{{ phone.quantity }}">
+											<br>
+											<input class="btn btn-success mt-3" type="submit" value="Add to cart">
+										</form>
       </div>
    </div>
 </div>

@@ -6,7 +6,7 @@
 <div style="background-color: pink"> 
 	<div class="container mt-3 text-center">
 		<h2 class="font family size = 11 ">
-			apple store
+			Phone store
 		</h2>
 		<div
 			class="row">
@@ -58,8 +58,8 @@
 								<div class="col-md-3 mt-4">
 								{% endif %}
 								<div class="card"style="background-color:lightblue">
-									<a href="{{ path('phone_detail', {'id' : phone.id })}}">
-										<img src="{{ asset('images/phones/'~phone.image) }}" width="150" height="150">
+									<a href="{{ path('phone_detail', {'id' : phone.id }) }}">
+										<img src="{{ phone.image }}" width="150" height="150">
 									</a>
 									<h4 class="font family">
 										{{ phone.title }}
