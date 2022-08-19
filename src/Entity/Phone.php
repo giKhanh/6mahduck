@@ -102,7 +102,6 @@ class Phone
         return $this;
     }
 
-      //Note: bỏ string ở hàm get & set Image
       public function getImage(): ?string
       {
           return $this->image;

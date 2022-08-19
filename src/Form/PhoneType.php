@@ -54,18 +54,14 @@ class PhoneType extends AbstractType
                     'maxlength' => 255
                 ]
             ])
-            /* 
-            Thông tin chứa dữ liệu của bảng khác trong DB
-            => Load dữ liệu của bảng Producer và Color trong 
-            form add/edit Phone để người dùng lựa chọn
-            */
+
             ->add('producers', EntityType::class,
             [
                 'label' => 'Producer',
                 'required' => true,
                 'class' => Producer::class,
                 'choice_label' => 'name',
-                'multiple' => true,  //nếu có thể chọn nhiều option (relationship: many)
+                'multiple' => true, 
                 'expanded' => false
             ]) 
             ->add('color', EntityType::class,
@@ -74,7 +70,7 @@ class PhoneType extends AbstractType
                 'required' => true,
                 'class' => Color::class,
                 'choice_label' => 'name',
-                'multiple' => false, //nếu chỉ được chọn 1 option (relationship: 1)
+                'multiple' => false, 
                 'expanded' => false
             ])
 

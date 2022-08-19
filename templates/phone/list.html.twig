@@ -1,4 +1,4 @@
-{# thiết kế giao diện của client theo dạng thẻ  #}
+
 
 {% extends "base.html.twig" %}
 
@@ -10,7 +10,7 @@
 		</h2>
 		<div
 			class="row">
-			{# sắp xếp #}
+			{# arrange #}
 			<div class="col-md-5">
 				<div class="row">
 					<div class="col">
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 			</div>
-			{# tìm kiếm #}
+			{# search #}
 			<div class="col-md-7">
 				<div class="row">
 					<div class="col">
@@ -54,7 +54,6 @@
 						{% if phones | length < 4 %}
 							<div class="col mt-4">
 							{% else %}
-								{# col-md-3: mỗi hàng hiển thị 4 phone  #}
 								<div class="col-md-3 mt-4">
 								{% endif %}
 								<div class="card"style="background-color:lightblue">
@@ -77,7 +76,6 @@
 									</div>
 									<div
 										class="card card-footer mt-1">
-										{# gửi dữ liệu sang action addToCart trong CartController #}
 										<div class = "font family">
 										<form action="{{ path('add_to_cart')}}" method="post">
 											<input type="hidden" name="phoneid" value="{{ phone.id }}">

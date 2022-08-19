@@ -54,7 +54,6 @@ class StoreController extends AbstractController
       if ($store == null) {
           $this->addFlash('Warning', 'Store not existed !');
       } 
-      //check xem còn phone trong store hay không trước khi xóa
       else if (count($store->getPhones()) > 0) {
         $this->addFlash('Warning', 'Can not delete this store !');
       } 

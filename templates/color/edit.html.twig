@@ -1,4 +1,4 @@
-{# format giao diện form tự động bằng bootstrap #}
+
 {% form_theme colorForm 'bootstrap_5_layout.html.twig' %}
 {% extends "base.html.twig" %}
 
@@ -7,10 +7,7 @@
 <div class="container col-md-4 text-center mt-3">
    <div class="card p-3 bg-light">
       <h3 class="alert alert-primary">Edit color</h3>
-      {# TH1: Nếu đã add nút Submit ở trong form #}
-      {# {{ form (colorForm )}} #}
 
-      {# TH2: Nếu chưa add nút Submit ở trong form #}
       {{ form_start(colorForm) }}
          
       {{ form_widget(colorForm)}}
